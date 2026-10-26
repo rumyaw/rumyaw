@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-label="rumyaw — full stack developer. Go, TypeScript, PostgreSQL, Docker.">
+  <style>
+    :root { --bg:#0b0d10; --ink:#f2f2ee; --mute:#8a9099; --acc:#c6ff3d; --on:#0b0d10; }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f5f5f1; --ink:#101214; --mute:#5d636b; --acc:#2d7a00; --on:#f5f5f1; }
+    }
+    text { font-family: Inter, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .bg { fill: var(--bg); }
+    .name { font-size: 168px; font-weight: 700; letter-spacing: -7px; }
+    .word { font-size: 38px; font-weight: 700; }
+    .ink { fill: var(--ink); }
+    .lit { fill: var(--acc); stroke: var(--acc); stroke-width: 1; }
+    .sub { fill: var(--ink); font-size: 26px; font-weight: 500; }
+    .meta { fill: var(--mute); font-size: 20px; }
+    .corner { fill: none; stroke: var(--acc); stroke-width: 4; stroke-linecap: square; }
+    .tag { fill: var(--acc); }
+    .tagt { fill: var(--on); font-size: 18px; font-weight: 700; }
+    .scan { fill: var(--acc); }
+    @media (prefers-reduced-motion: reduce) { .scan, .lit { display: none; } }
+  </style>
+
+  <defs>
+    <!-- the lit area grows behind each scan line, so letters turn green as it passes -->
+    <clipPath id="litName">
+      <rect x="60" y="28" width="0" height="234">
+        <animate attributeName="width" values="0;640;640;0;0" keyTimes="0;.4;.5;.9;1" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines=".6 0 .4 1;0 0 1 1;.6 0 .4 1;0 0 1 1"/>
+      </rect>
+    </clipPath>
+    <clipPath id="litStack">
+      <rect x="760" y="28" width="0" height="234">
+        <animate attributeName="width" values="0;374;374;0;0" keyTimes="0;.4;.5;.9;1" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines=".6 0 .4 1;0 0 1 1;.6 0 .4 1;0 0 1 1"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <rect class="bg" width="1200" height="380"/>
+
+  <g transform="translate(0 20)">
+    <!-- name -->
+    <text class="name ink" x="80" y="222">rumyaw</text>
+    <text class="name lit" x="80" y="222" clip-path="url(#litName)">rumyaw</text>
+
+    <g class="corner">
+      <path d="M60 52 V28 H84"/>
+      <path d="M676 28 H700 V52"/>
+      <path d="M60 238 V262 H84"/>
+      <path d="M676 262 H700 V238"/>
+    </g>
+    <rect class="tag" x="60" y="-4" width="80" height="32"/>
+    <text class="tagt" x="72" y="19">name</text>
+
+    <rect class="scan" x="60" y="28" width="3" height="234">
+      <animate attributeName="x" values="60;697;697;60;60" keyTimes="0;.4;.5;.9;1" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines=".6 0 .4 1;0 0 1 1;.6 0 .4 1;0 0 1 1"/>
+    </rect>
+
+    <!-- stack -->
+    <g class="corner">
+      <path d="M760 52 V28 H784"/>
+      <path d="M1110 28 H1134 V52"/>
+      <path d="M760 238 V262 H784"/>
+      <path d="M1110 262 H1134 V238"/>
+    </g>
+    <rect class="tag" x="760" y="-4" width="92" height="32"/>
+    <text class="tagt" x="772" y="19">stack</text>
+
+    <g class="word ink">
+      <text x="790" y="94">Go</text>
+      <text x="790" y="140">TypeScript</text>
+      <text x="790" y="186">PostgreSQL</text>
+      <text x="790" y="232">Docker</text>
+    </g>
+    <g class="word lit" clip-path="url(#litStack)">
+      <text x="790" y="94">Go</text>
+      <text x="790" y="140">TypeScript</text>
+      <text x="790" y="186">PostgreSQL</text>
+      <text x="790" y="232">Docker</text>
+    </g>
+
+    <rect class="scan" x="760" y="28" width="3" height="234">
+      <animate attributeName="x" values="760;1131;1131;760;760" keyTimes="0;.4;.5;.9;1" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines=".6 0 .4 1;0 0 1 1;.6 0 .4 1;0 0 1 1"/>
+    </rect>
+  </g>
+
+  <text class="sub" x="80" y="318">Full stack developer</text>
+  <text class="meta" x="80" y="352">Уфа · telegram @ruseggg</text>
+</svg>
